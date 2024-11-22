@@ -35,7 +35,7 @@ const parseFile = (file) => {
 };
 
 // POST Route to process data and file
-app.post('/bfhl', upload.single('file'), (req, res) => {
+app.post('/', upload.single('file'), (req, res) => {
   try {
     const { jsonData } = req.body;
 
@@ -90,7 +90,7 @@ app.post('/bfhl', upload.single('file'), (req, res) => {
 });
 
 // GET Route
-app.get('/bfhl', (req, res) => {
+app.get('/', (req, res) => {
   res.status(200).json({ operation_code: 1 });
 });
 
